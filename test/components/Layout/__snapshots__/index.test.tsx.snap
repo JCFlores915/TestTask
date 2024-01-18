@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Component renders children correctly 1`] = `
+<main
+  className="ant-layout-content layout css-dev-only-do-not-override-zl9ks2"
+>
+  <div>
+    Test Content
+  </div>
+</main>
+`;

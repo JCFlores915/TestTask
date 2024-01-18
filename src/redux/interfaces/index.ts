@@ -15,7 +15,7 @@ export interface INotification {
 export interface IDataType {
   id: string;
   name: string;
-  createdAt: string;
+  createdAt?: string;
   avatar: string;
   username?: string;
   password?: string;

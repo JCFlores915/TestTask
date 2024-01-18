@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Renderizar el CustomButton  de manera correcta 1`] = `
+<button
+  className="ant-btn css-dev-only-do-not-override-zl9ks2 ant-btn-default btn-custom-warning"
+  disabled={false}
+  onClick={[Function]}
+  style={{}}
+  type="button"
+>
+  <span>
+    Home
+  </span>
+</button>
+`;
+
+exports[`Button Component Renderizar el CustomButton de manera correcta con block vacío 1`] = `
+<button
+  className="ant-btn css-dev-only-do-not-override-zl9ks2 ant-btn-default btn-custom-warning"
+  disabled={false}
+  onClick={[Function]}
+  style={{}}
+  type="button"
+>
+  <span>
+    Home
+  </span>
+</button>
+`;
+
+exports[`Button Component Renderizar el CustomButton de manera correcta con diferentes tipos 1`] = `
+<button
+  className="ant-btn css-dev-only-do-not-override-zl9ks2 ant-btn-default btn-custom-success-full"
+  disabled={false}
+  onClick={[Function]}
+  style={{}}
+  type="submit"
+>
+  <span>
+    Submit
+  </span>
+</button>
+`;
+
+exports[`Button Component Renderizar el CustomButton de manera correcta con el prop de texto vacío 1`] = `
+<button
+  className="ant-btn css-dev-only-do-not-override-zl9ks2 ant-btn-default btn-custom-warning"
+  disabled={false}
+  onClick={[Function]}
+  style={{}}
+  type="button"
+/>
+`;

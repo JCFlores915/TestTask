@@ -6,13 +6,9 @@ import { List, Avatar, Skeleton, Divider } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import moment from 'moment';
 import {IProps} from '../../redux/interfaces';
-
-
-
 const CustomListScroll = (
-    { data, loading, getListData, hasMore = false }: IProps
+    { data, getListData, hasMore = false }: IProps
 ) => { 
-
     return (
         <div
         id="scrollableDiv"
@@ -21,23 +17,26 @@ const CustomListScroll = (
         <InfiniteScroll
             dataLength={data.length}
             next={getListData}
-            hasMore={hasMore}
+            hasMore={data.length === 0 ? false : hasMore}
             loader={<Skeleton avatar paragraph={{ rows: 1 }} active />}
             endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
             scrollableTarget="scrollableDiv"
         >
             <List
                 dataSource={data}
-                renderItem={(item) => (
-                    <List.Item key={item.id}>
-                        <List.Item.Meta
-                            avatar={<Avatar src={item.avatar} />}
-                            title={<h3 >{item.name}</h3>}
-                            description={item.username}
-                        />
-                        <div>Create: {moment(item.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</div>
-                    </List.Item>
-                )}
+                renderItem={(item) => {
+                    const date = moment(item?.createdAt).format('MMMM Do YYYY, h:mm:ss a');
+                    return (
+                        <List.Item key={item.id}>
+                            <List.Item.Meta
+                                avatar={<Avatar src={item.avatar} />}
+                                title={<h3 >{item.name}</h3>}
+                                description={item.username}
+                            />
+                            <div>Create: {date}</div>
+                        </List.Item>
+                    )
+                }}
             />
         </InfiniteScroll>
     </div>
