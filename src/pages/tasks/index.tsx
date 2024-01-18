@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-import { List, Avatar, Divider, Modal, Form, Row, Col, Input, Alert } from 'antd';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import { Divider, Modal, Form, Row, Col, Input, Alert } from 'antd';
 import { useNavigate } from 'react-router-dom'
-import { BookOutlined } from '@ant-design/icons';
 import { IInitialState, IDataType } from '../../redux/interfaces';
 import moment from 'moment';
 import { useSelector, useDispatch } from 'react-redux';

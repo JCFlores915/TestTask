@@ -5,7 +5,7 @@ import { Layout } from 'antd'
 const { Content: AntContent } = Layout
 
 const Content = ({ children } : {children: React.ReactNode}) => {
-  return (<div className="layout">{children}</div>)
+  return (<AntContent className="layout">{children}</AntContent>)
 }
 
 export default Content

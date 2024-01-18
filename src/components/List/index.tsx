@@ -5,7 +5,7 @@ import './index.scss';
 import { List, Avatar, Skeleton, Divider } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import moment from 'moment';
-import { IDataType, IProps} from '../../redux/interfaces';
+import {IProps} from '../../redux/interfaces';
 
 
 
