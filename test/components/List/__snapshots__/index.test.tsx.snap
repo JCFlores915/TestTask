@@ -82,18 +82,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta 1`] = 
           </div>
         </div>
       </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
-      </div>
     </div>
   </div>
 </div>
@@ -175,18 +163,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta con da
             </ul>
           </div>
         </div>
-      </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
       </div>
     </div>
   </div>
@@ -2319,18 +2295,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta con da
             </ul>
           </div>
         </div>
-      </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
       </div>
     </div>
   </div>
@@ -4705,18 +4669,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta con da
           </div>
         </div>
       </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
-      </div>
     </div>
   </div>
 </div>
@@ -4804,18 +4756,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta con ha
           </div>
         </div>
       </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
-      </div>
     </div>
   </div>
 </div>
@@ -4902,18 +4842,6 @@ exports[`List Component Renderizar el CustomListScroll de manera correcta con ha
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="ant-divider css-dev-only-do-not-override-zl9ks2 ant-divider-horizontal ant-divider-with-text ant-divider-with-text-center ant-divider-plain"
-        role="separator"
-        style={{}}
-      >
-        <span
-          className="ant-divider-inner-text"
-          style={{}}
-        >
-          It is all, nothing more 🤐
-        </span>
       </div>
     </div>
   </div>
