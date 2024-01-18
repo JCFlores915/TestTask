@@ -6,6 +6,7 @@ import { List, Avatar, Skeleton, Divider } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import moment from 'moment';
 import {IProps} from '../../redux/interfaces';
+import { SnippetsOutlined } from '@ant-design/icons';
 const CustomListScroll = (
     { data, getListData, hasMore = false }: IProps
 ) => { 
@@ -29,7 +30,7 @@ const CustomListScroll = (
                     return (
                         <List.Item key={item.id}>
                             <List.Item.Meta
-                                avatar={<Avatar src={item.avatar} />}
+                                avatar={item.avatar ? <Avatar src={item.avatar} />  : <Avatar icon={<SnippetsOutlined />} />}
                                 title={<h3 >{item.name}</h3>}
                                 description={item.username}
                             />
