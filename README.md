@@ -2,7 +2,12 @@
 
 ## Imagen local del proyecto
 
-<!-- ![alt text](https://github.com/JCFlores915/TestDevsu/blob/main/src/assets/screen.png?raw=true) -->
+![alt text](https://github.com/JCFlores915/TestTask/blob/main/src/assets/home.png?raw=true)
+![alt text](https://github.com/JCFlores915/TestTask/blob/main/src/assets/list-task.png?raw=true)
+![alt text](https://github.com/JCFlores915/TestTask/blob/main/src/assets/new-task.png?raw=true)
+![alt text](https://github.com/JCFlores915/TestTask/blob/main/src/assets/list-user.png?raw=true)
+
+
 
 ## Clonar el repositorio
 
