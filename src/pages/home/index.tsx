@@ -1,27 +1,29 @@
-import React from 'react'
-import './index.scss'
-import { Row, Col, Button } from 'antd'
-import { useNavigate } from 'react-router-dom'
 
+import { Row, Col, Form } from 'antd'
+import { useNavigate } from 'react-router-dom'
+import CustomButton from '../../components/Button'
+import Content from '../../components/Layout'
 const Home = () => {
 
     const navigate = useNavigate()
 
     return (
-        <div className='homeContainer'>
-            <Row>
+        <Content>
+            <Row gutter={24}>
                 <Col span={24}>
-                    <div className='homeTitle'>
-                        <Button className='btnTasks' onClick={() => navigate('/tasks')}>Tasks</Button>
-                        <br />
-                        <Button className='btnList' onClick={() => navigate('/list')}>List</Button>
-                    </div>
+                    <Form.Item>
+                        <CustomButton type='info' text='Tasks' onClick={() => navigate('/tasks')} />
+                    </Form.Item>
+                </Col>
+                <Col span={24}>
+                    <Form.Item>
+                        <CustomButton type='info' text='List' onClick={() => navigate('/list')} />
+                    </Form.Item>
+
                 </Col>
             </Row>
-        </div>
+        </Content>
     )
 }
-
-
 
 export default Home

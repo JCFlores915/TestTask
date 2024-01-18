@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react'
-import './index.scss'
-import { List, Avatar, Divider, Modal, Form, Row, Col, Input, Button, Alert } from 'antd';
+import { List, Avatar, Divider, Modal, Form, Row, Col, Input, Alert } from 'antd';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { useNavigate } from 'react-router-dom'
 import { BookOutlined } from '@ant-design/icons';
-import { IInitialState, ITask } from '../../redux/interfaces';
+import { IInitialState, IDataType } from '../../redux/interfaces';
 import moment from 'moment';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTaskThunk } from '../../redux';
-
-
+import CustomButton from '../../components/Button';
+import Container from '../../components/Layout';
+import CustomListScroll from '../../components/List';
 const Tasks = () => {
-    const [data, setData] = useState<ITask[]>([]);
+    const [data, setData] = useState<IDataType[]>([]);
     const [visible, setVisible] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const navigate = useNavigate()
@@ -34,8 +35,8 @@ const Tasks = () => {
     }, [showAlert])
 
     //
-    const onFinish = (values: ITask) => {
-        values.createAt = moment().format('YYYY-MM-DD HH:mm:ss')
+    const onFinish = (values: IDataType) => {
+        values.createdAt = moment().format('YYYY-MM-DD HH:mm:ss')
         dispatch(addTaskThunk(values) as any)
         setVisible(false)
         form.resetFields(
@@ -45,43 +46,26 @@ const Tasks = () => {
     }
 
     return (
-
-        <div className='tasksContainer'>
+        <Container>
             <Row gutter={5}>
                 <Col span={12}>
-                    <Button className='btnAddTasks' onClick={() => {
-                        setVisible(true)
-                    }}>New Task</Button>
+                    <CustomButton type='primary' text='New Task' onClick={() => setVisible(true)} />
                 </Col>
                 <Col span={12}>
-                    <Button className='btnHome' onClick={() => {
-                        navigate('/home')
-                    }
-                    }>Home</Button>
+                    <CustomButton type='warning' text='Home' onClick={() => navigate('/home')} />
                 </Col>
 
             </Row>
 
             <Divider plain>Tasks</Divider>
-            <div
-                id="scrollableDiv"
+           
+            <CustomListScroll
+                data={data}
+                loading={false}
+                getListData={() => { }}
+                hasMore={false}
+            />
 
-                className='scrollableDiv'
-            >
-
-                <List
-                    dataSource={data}
-                    renderItem={(item, index) => (
-                        <List.Item key={index}>
-                            <List.Item.Meta
-                                avatar={<Avatar icon={<BookOutlined />} />}
-                                title={<strong>{item.name}</strong>}
-                                description={item.createAt}
-                            />
-                        </List.Item>
-                    )}
-                />
-            </div>
             <br />
             {showAlert && <Alert message="Task added successfully" type="success" />}
             <Modal
@@ -109,13 +93,13 @@ const Tasks = () => {
                                 <Input placeholder='New Task Name' />
                             </Form.Item>
                             <Form.Item>
-                                <Button type='primary' htmlType='submit' size='large' block>Add</Button>
+                                <CustomButton type='info' text='Add' htmlType='submit' block='block' />
                             </Form.Item>
                         </Col>
                     </Row>
                 </Form>
             </Modal>
-        </div>
+        </Container>
 
     )
 }
